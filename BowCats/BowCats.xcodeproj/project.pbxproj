@@ -1,0 +1,676 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3716641B2562036300DAA86E /* CatResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716641A2562036300DAA86E /* CatResult.swift */; };
+		3716642025620E1D00DAA86E /* CatState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716641F25620E1D00DAA86E /* CatState.swift */; };
+		371664262562128D00DAA86E /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 371664252562128D00DAA86E /* AlamofireImage */; };
+		373F34542561DC0600FE1FCD /* BowCatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F34532561DC0600FE1FCD /* BowCatsApp.swift */; };
+		373F34562561DC0600FE1FCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F34552561DC0600FE1FCD /* ContentView.swift */; };
+		373F34582561DC0700FE1FCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373F34572561DC0700FE1FCD /* Assets.xcassets */; };
+		373F345B2561DC0700FE1FCD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373F345A2561DC0700FE1FCD /* Preview Assets.xcassets */; };
+		373F34662561DC0700FE1FCD /* BowCatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F34652561DC0700FE1FCD /* BowCatsTests.swift */; };
+		373F34712561DC0700FE1FCD /* BowCatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F34702561DC0700FE1FCD /* BowCatsUITests.swift */; };
+		373F34822561F41900FE1FCD /* CatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F34812561F41900FE1FCD /* CatViewModel.swift */; };
+		373F34882561F69100FE1FCD /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 373F34872561F69100FE1FCD /* RxAlamofire */; };
+		373F348E2561F6FF00FE1FCD /* Bow in Frameworks */ = {isa = PBXBuildFile; productRef = 373F348D2561F6FF00FE1FCD /* Bow */; };
+		373F34902561F6FF00FE1FCD /* BowEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 373F348F2561F6FF00FE1FCD /* BowEffects */; };
+		373F34922561F6FF00FE1FCD /* BowOptics in Frameworks */ = {isa = PBXBuildFile; productRef = 373F34912561F6FF00FE1FCD /* BowOptics */; };
+		373F34962561F6FF00FE1FCD /* BowRx in Frameworks */ = {isa = PBXBuildFile; productRef = 373F34952561F6FF00FE1FCD /* BowRx */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		373F34622561DC0700FE1FCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 373F34482561DC0600FE1FCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 373F344F2561DC0600FE1FCD;
+			remoteInfo = BowCats;
+		};
+		373F346D2561DC0700FE1FCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 373F34482561DC0600FE1FCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 373F344F2561DC0600FE1FCD;
+			remoteInfo = BowCats;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3716641A2562036300DAA86E /* CatResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatResult.swift; sourceTree = "<group>"; };
+		3716641F25620E1D00DAA86E /* CatState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatState.swift; sourceTree = "<group>"; };
+		373F34502561DC0600FE1FCD /* BowCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BowCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		373F34532561DC0600FE1FCD /* BowCatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowCatsApp.swift; sourceTree = "<group>"; };
+		373F34552561DC0600FE1FCD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		373F34572561DC0700FE1FCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		373F345A2561DC0700FE1FCD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		373F345C2561DC0700FE1FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		373F34612561DC0700FE1FCD /* BowCatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BowCatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		373F34652561DC0700FE1FCD /* BowCatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowCatsTests.swift; sourceTree = "<group>"; };
+		373F34672561DC0700FE1FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		373F346C2561DC0700FE1FCD /* BowCatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BowCatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		373F34702561DC0700FE1FCD /* BowCatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowCatsUITests.swift; sourceTree = "<group>"; };
+		373F34722561DC0700FE1FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		373F34812561F41900FE1FCD /* CatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		373F344D2561DC0600FE1FCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373F34882561F69100FE1FCD /* RxAlamofire in Frameworks */,
+				373F348E2561F6FF00FE1FCD /* Bow in Frameworks */,
+				373F34962561F6FF00FE1FCD /* BowRx in Frameworks */,
+				373F34902561F6FF00FE1FCD /* BowEffects in Frameworks */,
+				373F34922561F6FF00FE1FCD /* BowOptics in Frameworks */,
+				371664262562128D00DAA86E /* AlamofireImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373F345E2561DC0700FE1FCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373F34692561DC0700FE1FCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		373F34472561DC0600FE1FCD = {
+			isa = PBXGroup;
+			children = (
+				373F34522561DC0600FE1FCD /* BowCats */,
+				373F34642561DC0700FE1FCD /* BowCatsTests */,
+				373F346F2561DC0700FE1FCD /* BowCatsUITests */,
+				373F34512561DC0600FE1FCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		373F34512561DC0600FE1FCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				373F34502561DC0600FE1FCD /* BowCats.app */,
+				373F34612561DC0700FE1FCD /* BowCatsTests.xctest */,
+				373F346C2561DC0700FE1FCD /* BowCatsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		373F34522561DC0600FE1FCD /* BowCats */ = {
+			isa = PBXGroup;
+			children = (
+				373F34532561DC0600FE1FCD /* BowCatsApp.swift */,
+				373F34552561DC0600FE1FCD /* ContentView.swift */,
+				373F34812561F41900FE1FCD /* CatViewModel.swift */,
+				3716641A2562036300DAA86E /* CatResult.swift */,
+				3716641F25620E1D00DAA86E /* CatState.swift */,
+				373F34572561DC0700FE1FCD /* Assets.xcassets */,
+				373F345C2561DC0700FE1FCD /* Info.plist */,
+				373F34592561DC0700FE1FCD /* Preview Content */,
+			);
+			path = BowCats;
+			sourceTree = "<group>";
+		};
+		373F34592561DC0700FE1FCD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				373F345A2561DC0700FE1FCD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		373F34642561DC0700FE1FCD /* BowCatsTests */ = {
+			isa = PBXGroup;
+			children = (
+				373F34652561DC0700FE1FCD /* BowCatsTests.swift */,
+				373F34672561DC0700FE1FCD /* Info.plist */,
+			);
+			path = BowCatsTests;
+			sourceTree = "<group>";
+		};
+		373F346F2561DC0700FE1FCD /* BowCatsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				373F34702561DC0700FE1FCD /* BowCatsUITests.swift */,
+				373F34722561DC0700FE1FCD /* Info.plist */,
+			);
+			path = BowCatsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		373F344F2561DC0600FE1FCD /* BowCats */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 373F34752561DC0700FE1FCD /* Build configuration list for PBXNativeTarget "BowCats" */;
+			buildPhases = (
+				373F344C2561DC0600FE1FCD /* Sources */,
+				373F344D2561DC0600FE1FCD /* Frameworks */,
+				373F344E2561DC0600FE1FCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BowCats;
+			packageProductDependencies = (
+				373F34872561F69100FE1FCD /* RxAlamofire */,
+				373F348D2561F6FF00FE1FCD /* Bow */,
+				373F348F2561F6FF00FE1FCD /* BowEffects */,
+				373F34912561F6FF00FE1FCD /* BowOptics */,
+				373F34952561F6FF00FE1FCD /* BowRx */,
+				371664252562128D00DAA86E /* AlamofireImage */,
+			);
+			productName = BowCats;
+			productReference = 373F34502561DC0600FE1FCD /* BowCats.app */;
+			productType = "com.apple.product-type.application";
+		};
+		373F34602561DC0700FE1FCD /* BowCatsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 373F34782561DC0700FE1FCD /* Build configuration list for PBXNativeTarget "BowCatsTests" */;
+			buildPhases = (
+				373F345D2561DC0700FE1FCD /* Sources */,
+				373F345E2561DC0700FE1FCD /* Frameworks */,
+				373F345F2561DC0700FE1FCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				373F34632561DC0700FE1FCD /* PBXTargetDependency */,
+			);
+			name = BowCatsTests;
+			productName = BowCatsTests;
+			productReference = 373F34612561DC0700FE1FCD /* BowCatsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		373F346B2561DC0700FE1FCD /* BowCatsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 373F347B2561DC0700FE1FCD /* Build configuration list for PBXNativeTarget "BowCatsUITests" */;
+			buildPhases = (
+				373F34682561DC0700FE1FCD /* Sources */,
+				373F34692561DC0700FE1FCD /* Frameworks */,
+				373F346A2561DC0700FE1FCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				373F346E2561DC0700FE1FCD /* PBXTargetDependency */,
+			);
+			name = BowCatsUITests;
+			productName = BowCatsUITests;
+			productReference = 373F346C2561DC0700FE1FCD /* BowCatsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		373F34482561DC0600FE1FCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					373F344F2561DC0600FE1FCD = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					373F34602561DC0700FE1FCD = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 373F344F2561DC0600FE1FCD;
+					};
+					373F346B2561DC0700FE1FCD = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 373F344F2561DC0600FE1FCD;
+					};
+				};
+			};
+			buildConfigurationList = 373F344B2561DC0600FE1FCD /* Build configuration list for PBXProject "BowCats" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 373F34472561DC0600FE1FCD;
+			packageReferences = (
+				373F34862561F69100FE1FCD /* XCRemoteSwiftPackageReference "RxAlamofire" */,
+				373F348C2561F6FF00FE1FCD /* XCRemoteSwiftPackageReference "bow" */,
+				371664242562128D00DAA86E /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
+			productRefGroup = 373F34512561DC0600FE1FCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				373F344F2561DC0600FE1FCD /* BowCats */,
+				373F34602561DC0700FE1FCD /* BowCatsTests */,
+				373F346B2561DC0700FE1FCD /* BowCatsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		373F344E2561DC0600FE1FCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373F345B2561DC0700FE1FCD /* Preview Assets.xcassets in Resources */,
+				373F34582561DC0700FE1FCD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373F345F2561DC0700FE1FCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373F346A2561DC0700FE1FCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		373F344C2561DC0600FE1FCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3716642025620E1D00DAA86E /* CatState.swift in Sources */,
+				373F34562561DC0600FE1FCD /* ContentView.swift in Sources */,
+				3716641B2562036300DAA86E /* CatResult.swift in Sources */,
+				373F34542561DC0600FE1FCD /* BowCatsApp.swift in Sources */,
+				373F34822561F41900FE1FCD /* CatViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373F345D2561DC0700FE1FCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373F34662561DC0700FE1FCD /* BowCatsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373F34682561DC0700FE1FCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373F34712561DC0700FE1FCD /* BowCatsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		373F34632561DC0700FE1FCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 373F344F2561DC0600FE1FCD /* BowCats */;
+			targetProxy = 373F34622561DC0700FE1FCD /* PBXContainerItemProxy */;
+		};
+		373F346E2561DC0700FE1FCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 373F344F2561DC0600FE1FCD /* BowCats */;
+			targetProxy = 373F346D2561DC0700FE1FCD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		373F34732561DC0700FE1FCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		373F34742561DC0700FE1FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		373F34762561DC0700FE1FCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"BowCats/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BowCats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.catsynth.BowCats;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		373F34772561DC0700FE1FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"BowCats/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BowCats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.catsynth.BowCats;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		373F34792561DC0700FE1FCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BowCatsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.catsynth.BowCatsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BowCats.app/BowCats";
+			};
+			name = Debug;
+		};
+		373F347A2561DC0700FE1FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BowCatsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.catsynth.BowCatsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BowCats.app/BowCats";
+			};
+			name = Release;
+		};
+		373F347C2561DC0700FE1FCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BowCatsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.catsynth.BowCatsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BowCats;
+			};
+			name = Debug;
+		};
+		373F347D2561DC0700FE1FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BowCatsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.catsynth.BowCatsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BowCats;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		373F344B2561DC0600FE1FCD /* Build configuration list for PBXProject "BowCats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373F34732561DC0700FE1FCD /* Debug */,
+				373F34742561DC0700FE1FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		373F34752561DC0700FE1FCD /* Build configuration list for PBXNativeTarget "BowCats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373F34762561DC0700FE1FCD /* Debug */,
+				373F34772561DC0700FE1FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		373F34782561DC0700FE1FCD /* Build configuration list for PBXNativeTarget "BowCatsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373F34792561DC0700FE1FCD /* Debug */,
+				373F347A2561DC0700FE1FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		373F347B2561DC0700FE1FCD /* Build configuration list for PBXNativeTarget "BowCatsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373F347C2561DC0700FE1FCD /* Debug */,
+				373F347D2561DC0700FE1FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		371664242562128D00DAA86E /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+		373F34862561F69100FE1FCD /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.2;
+			};
+		};
+		373F348C2561F6FF00FE1FCD /* XCRemoteSwiftPackageReference "bow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bow-swift/bow.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		371664252562128D00DAA86E /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 371664242562128D00DAA86E /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		373F34872561F69100FE1FCD /* RxAlamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 373F34862561F69100FE1FCD /* XCRemoteSwiftPackageReference "RxAlamofire" */;
+			productName = RxAlamofire;
+		};
+		373F348D2561F6FF00FE1FCD /* Bow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 373F348C2561F6FF00FE1FCD /* XCRemoteSwiftPackageReference "bow" */;
+			productName = Bow;
+		};
+		373F348F2561F6FF00FE1FCD /* BowEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 373F348C2561F6FF00FE1FCD /* XCRemoteSwiftPackageReference "bow" */;
+			productName = BowEffects;
+		};
+		373F34912561F6FF00FE1FCD /* BowOptics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 373F348C2561F6FF00FE1FCD /* XCRemoteSwiftPackageReference "bow" */;
+			productName = BowOptics;
+		};
+		373F34952561F6FF00FE1FCD /* BowRx */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 373F348C2561F6FF00FE1FCD /* XCRemoteSwiftPackageReference "bow" */;
+			productName = BowRx;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 373F34482561DC0600FE1FCD /* Project object */;
+}
