@@ -35,19 +35,8 @@ class CatViewModel : ObservableObject {
         let either = Either<Error,Option<CatResult>>.fix(
             callCatAPI()
                 .unsafeRunSyncEither()
-                .map { (input : Any) -> Option<CatResult> in
-                print("")
-                guard let array = input as? [[AnyHashable:Any]] else { return Option.none() }
-                let result = array.k()
-                    .firstOrNone()
-                    .flatMap { (json) -> Option<CatResult> in
-                        guard let id = json["id"] as? String else  { return Option.none() }
-                        guard let url = json["url"] as? String else  { return Option.none() }
-                        let result = CatResult(id: id, url: url)
-                        return Option.some(result)
-                    }
-                return Option.fix(result)
-           }
+                .map { try! JSONDecoder().decode([CatResult].self, from: $0) }
+                .map { $0.firstOrNone }
         )
 
         if either.isRight {
@@ -62,21 +51,14 @@ class CatViewModel : ObservableObject {
         }
     }
     
-    func callCatAPI() -> IO<Error, Any> {
-        print ("Meow")
-        return IO.async { callback in
-            print ("Meow2")
-            if let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=1") {
-                var request = URLRequest(url: url)
-                request.setValue("d10c4b51-d658-416f-9d6f-4735f439318d", forHTTPHeaderField: "x-api-key")
-                URLSession.shared.dataTask(with: request) { data, _, error in
-                        if let data = data {
-                            callback(.right(data))
-                        } else if let error = error {
-                            callback(.left(error))
-                        }
-                }.resume()
-            }
-        }^
+    func callCatAPI() -> IO<Error, Data> {
+        guard  let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=1") else {
+            return IO<Error, Data>()
+        }
+        var request = URLRequest(url: url)
+        request.setValue("d10c4b51-d658-416f-9d6f-4735f439318d", forHTTPHeaderField: "x-api-key")
+        let result = URLSession.shared.dataTaskIO(with: request)
+            .map { $0.data }
+        return IO<Error,Data>.fix(result)
     }
 }
