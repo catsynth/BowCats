@@ -51,12 +51,17 @@ class CatViewModel : ObservableObject {
         }
     }
     
-    func callCatAPI() -> IO<Error, Data> {
+    private let catApiKey = Bundle.main.object(forInfoDictionaryKey: "CAT_API_KEY") as? String
+    
+    private func callCatAPI() -> IO<Error, Data> {
+        guard let catApiKey = catApiKey else {
+            return IO<Error, Data>()
+        }
         guard  let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=1") else {
             return IO<Error, Data>()
         }
         var request = URLRequest(url: url)
-        request.setValue("d10c4b51-d658-416f-9d6f-4735f439318d", forHTTPHeaderField: "x-api-key")
+        request.setValue(catApiKey, forHTTPHeaderField: "x-api-key")
         let result = URLSession.shared.dataTaskIO(with: request)
             .map { $0.data }
         return IO<Error,Data>.fix(result)
